@@ -22,7 +22,7 @@ export default function SimpleBottomNavigation() {
         setValue(newValue);
       }}
     > 
-      <BottomNavigationAction component={Link} to='/Annonser' label="Annonser" icon={<SearchIcon />} />
+        <BottomNavigationAction component={Link} to='/Annonser' label="Annonser" icon={<SearchIcon />} />
         <BottomNavigationAction component={Link} to ='/NyAnnons' label="Ny Annons" icon={<AddCircleOutlineIcon />} />
         <BottomNavigationAction component={Link} label="Min Profil" icon={<PersonIcon />} />
     </BottomNavigation>
