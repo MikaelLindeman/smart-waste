@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import PersonIcon from '@mui/icons-material/Person';
 import React from 'react'
-import { Link } from 'react-dom';
+import { Link  } from 'react-router-dom';
 
 
 // Navbar
