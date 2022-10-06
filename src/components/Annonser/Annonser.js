@@ -2,7 +2,11 @@ import React from 'react'
 
 function Annonser() {
   return (
-    <div>Annonser</div>
+    <div>
+      <h1>
+        Annonser
+      </h1>
+    </div>
   )
 }
 

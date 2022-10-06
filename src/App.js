@@ -1,9 +1,22 @@
+import { Router } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
+import { Routes, Route } from 'react-router-dom';
 import Annonser from './components/Annonser/Annonser';
+import Nyannons from './components/NyAnnons/Nyannons';
+import Profil from './components/Profil/Profil';
+
 function App() {
-  return (
+    console.log(window.location.href);
+
+    return (
     <>
-    <Navbar />   
+    <Navbar />
+    <Routes>
+        <Route path ="/"  element={<Annonser />}/>
+        <Route path ="/components/NyAnnons/Nyannons"  element={<Nyannons />}/>
+        <Route path ="/Profil/Profil"  element={<Profil /> }/>
+
+    </Routes>
 
     </>
   );
