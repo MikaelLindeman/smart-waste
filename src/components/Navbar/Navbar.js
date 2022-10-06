@@ -39,14 +39,14 @@ export default function SimpleBottomNavigation() {
       ))}
         <BottomNavigationAction
         component={Link}
-        to ="./Can" 
+        to ="/Nyannons" 
         label="Ny Annons" 
         icon={<AddCircleOutlineIcon />} 
         />
     
         <BottomNavigationAction 
         component={Link}
-        to="../Profil/Profil"
+        to="/Profil"
         label="Min Profil" icon={<PersonIcon />} />
         
     </BottomNavigation>

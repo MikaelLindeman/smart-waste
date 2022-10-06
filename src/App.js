@@ -13,8 +13,8 @@ function App() {
     <Navbar />
     <Routes>
         <Route path ="/"  element={<Annonser />}/>
-        <Route path ="/components/NyAnnons/Nyannons"  element={<Nyannons />}/>
-        <Route path ="/Profil/Profil"  element={<Profil /> }/>
+        <Route path ="/Nyannons"  element={<Nyannons />}/>
+        <Route path ="/Profil"  element={<Profil /> }/>
 
     </Routes>
 
