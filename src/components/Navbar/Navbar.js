@@ -11,15 +11,14 @@ import { useState } from "react";
 
 
 
-// Navbar
 export default function SimpleBottomNavigation() {
+
     const pathname = window.location.pathname;
     const [value, setValue] = useState(pathname)
     const handleChange = (event, newValue) => {
       setValue(newValue)
     }
 
-    const pages = ["Pages"];
 
   return (
   <Box>
@@ -27,30 +26,26 @@ export default function SimpleBottomNavigation() {
       showLabels
       value={value}
       onChange={handleChange}> 
-      {pages.map((page) => (
-    <BottomNavigationAction 
-        key={page}
+        <BottomNavigationAction 
         component={Link}
         to ="/"
         label="Annonser"
-        value= 'can' 
+        value= 'Annonser' 
         icon={<SearchIcon />} 
         />
-      ))}
         <BottomNavigationAction
         component={Link}
         to ="/Nyannons" 
         label="Ny Annons" 
         icon={<AddCircleOutlineIcon />} 
         />
-    
         <BottomNavigationAction 
         component={Link}
         to="/Profil"
-        label="Min Profil" icon={<PersonIcon />} />
-        
+        label="Min Profil" 
+        icon={<PersonIcon />} 
+        />
     </BottomNavigation>
-
   </Box>
   );
 }

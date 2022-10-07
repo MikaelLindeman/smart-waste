@@ -11,12 +11,11 @@ function App() {
     return (
     <>
     <Navbar />
-    <Routes>
-        <Route path ="/"  element={<Annonser />}/>
-        <Route path ="/Nyannons"  element={<Nyannons />}/>
-        <Route path ="/Profil"  element={<Profil /> }/>
-
-    </Routes>
+        <Routes>
+            <Route path ="/"  element={<Annonser />}/>
+            <Route path ="/Nyannons"  element={<Nyannons />}/>
+            <Route path ="/Profil"  element={<Profil /> }/>
+        </Routes>
 
     </>
   );
