@@ -16,7 +16,6 @@ function Annonser() {
 
   return (
     <div>
-
       <h1>
         {annonser.map(function(annons) {
           return <div><FoodCard mat={annons.mat} 
