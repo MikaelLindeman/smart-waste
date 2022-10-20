@@ -7,6 +7,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import React from 'react'
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Paper from '@mui/material/Paper';
 
 
 
@@ -21,7 +22,8 @@ export default function SimpleBottomNavigation() {
 
 
   return (
-  <Box>
+  <Box  >
+    <Paper >
       <BottomNavigation sx= {{ position: 'fixed', bottom: 0, left: 0, right: 0 }}elevation={3}
       showLabels
       value={value}
@@ -46,6 +48,7 @@ export default function SimpleBottomNavigation() {
         icon={<PersonIcon />} 
         />
     </BottomNavigation>
+    </Paper>
   </Box>
   );
 }

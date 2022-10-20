@@ -7,7 +7,6 @@ function Annonser() {
     <div className='annonserPage'>
         <h1 className='annonser'>Annonser</h1>
         <div className='foodCard'><FoodCard /></div>
-     
     </div>
   )
 }

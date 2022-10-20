@@ -1,7 +1,5 @@
-.body {
-    color: black;
-    display: flex;
-    justify-content: center;
+html, body {
+    background-color: #F6F6F6;
 }
 
 .cardContainer {
@@ -13,7 +11,7 @@
 
 }
 .annonserPage {
-    background-color: antiquewhite;
+    background-color: #F6F6F6;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -32,4 +30,23 @@
     justify-content: space-evenly;
     align-content: center;
     align-items: flex-start;
+}
+.textContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+.textField {
+    justify-content: center;
+}
+
+.nyAnnons {
+    justify-content: center;
+    display: flex;
+}
+.nyAnnonsPage {
+    background-color: #F6F6F6;
 }
