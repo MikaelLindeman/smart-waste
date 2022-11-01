@@ -10,6 +10,7 @@ import { useState } from "react";
 import Paper from '@mui/material/Paper';
 
 
+
 export default function SimpleBottomNavigation() {
 
     const pathname = window.location.pathname;
