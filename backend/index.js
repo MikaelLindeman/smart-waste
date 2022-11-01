@@ -35,7 +35,7 @@ connection.once("open", function() {
         res.json(mat);
   });
 
-
+// Cors webpage
 var corsOptions = {
     origin: "http://localhost:8080"
 };
