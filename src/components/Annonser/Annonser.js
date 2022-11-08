@@ -1,5 +1,7 @@
+import { Search } from '@mui/icons-material'
 import React from 'react'
 import FoodCard from '../Cards/FoodCard'
+import {styled } from '@mui/material/styles'
 
 function Annonser() {
 
