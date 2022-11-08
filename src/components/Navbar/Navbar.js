@@ -21,11 +21,12 @@ export default function SimpleBottomNavigation() {
 
 
   return (
-  <Box  >
-    <Paper >
-      <BottomNavigation sx= {{ position: 'fixed', bottom: 0, left: 0, right: 0 }}elevation={3}
+  <Box>
+    <Paper>
+      <BottomNavigation sx= {{ position: 'fixed', bottom: 0, left: 0, right: 0, }}elevation={3}
       showLabels
       value={value}
+      className="navbar-box"
       onChange={handleChange}> 
         <BottomNavigationAction 
         component={Link}

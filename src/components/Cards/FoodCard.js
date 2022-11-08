@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import pic from '../../assets/Images/Burger.png'
 
 function Annonser() {
   const [annonser, setAnnonser] = useState([])
@@ -25,7 +26,8 @@ function Annonser() {
     <div>
       <p className='foodCard'>
         {annonser.map(function(annons) {
-          return <div><FoodCard mat={annons.mat} 
+          return <div><FoodCard 
+          mat={annons.mat} 
           allerg={annons.allerg}
           info={annons.info} />
           </div>
@@ -37,12 +39,12 @@ function Annonser() {
 function FoodCard(props) {
   return <>
       <div className='cardContainer'>
-        <Card sx={{ minWidth: 245, maxWidth: 245, minHeight: 250, maxHeight: 250, }} >
+        <Card sx={{ minWidth: 265, maxWidth: 265, minHeight: 250, maxHeight: 250, }} >
         <CardMedia
         component="img"
-        height="120"
+        height="100"
         width="244"
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image={pic}
         alt="green iguana"
         />
         <CardContent>
@@ -50,11 +52,14 @@ function FoodCard(props) {
           {props.mat}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {props.info}
+          {props.allerg}
         </Typography>
+        <Typography variant="body2">
+        {props.info}
+      </Typography>
         </CardContent>
         <CardActions>
-        <Button size="small">Se mer</Button>
+        <Button  size="small" className="btn-se-mer">Se mer</Button>
         </CardActions>
       </Card>
     </div>

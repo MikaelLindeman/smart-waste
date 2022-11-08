@@ -1,6 +1,8 @@
 html, body {
     background-color: #F6F6F6;
+    padding: 10px;
 }
+
 
 .cardContainer {
     background-color: bisque;
@@ -41,6 +43,14 @@ html, body {
 }
 .textField {
     justify-content: center;
+    max-width: 550px;
+}
+.btn-submit {
+    max-width: 550px;
+}
+.btn-se-mer {
+    z-index: 0;
+    padding: 2px;
 }
 
 .nyAnnons {
@@ -49,4 +59,7 @@ html, body {
 }
 .nyAnnonsPage {
     background-color: #F6F6F6;
+}
+.navbar-box {
+    z-index: 1;
 }

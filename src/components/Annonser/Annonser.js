@@ -5,7 +5,7 @@ function Annonser() {
 
   return (
     <div className='annonserPage'>
-        <h1 className='annonser'>Annonser</h1>
+        <h1 className='annonser'>Vad är du sugen på?</h1>
         <div className='foodCard'><FoodCard /></div>
     </div>
   )

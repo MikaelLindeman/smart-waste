@@ -8,10 +8,12 @@ import {useState} from 'react';
 
 function Nyannons() {
 
+    //Set 
     const [mat, setMat] = useState("")
     const [allerg, setAllerg] = useState("")
     const [info, setInfo] = useState("")
 
+    //When pressing submit posts post to Annonser
   const createFood = () => {
     Axios.post("http://localhost:8080/newFood", {
       mat: mat, 
@@ -46,7 +48,7 @@ function Nyannons() {
       onChange={(event) => {
         setInfo(event.target.value);
       }} />
-      <Button onClick={createFood} variant="contained" color="success">New post</Button>
+      <Button className='btn-submit' onClick={createFood} variant="contained" color="success">New post</Button>
 
 </Box>
     </div>
