@@ -6,11 +6,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import CreateNewForm from '../NyAnnons/NyForm';
 
 function Annonser() {
-  const url = ("http://localhost:8080/annonser")
   const [annonser, setAnnonser] = useState([])
+
   useEffect(() => {
     Axios.get("http://localhost:8080/annonser").then((response) => {
       setAnnonser(response.data)
@@ -22,18 +21,6 @@ function Annonser() {
   }, [])
 
   return (
-    // <>
-    // <CreateNewForm setAnnonser={setAnnonser} />
-    // {annonser.map(function(annons) {
-    //   return <FoodCard key={annons._id}
-    //   mat={annons.mat}
-    //   allerg={annons.allerg}
-    //   info={annons.info} 
-    //   photo={annons.photo} 
-    //   id={annons._id} 
-    //   setAnnonser={setAnnonser} />
-    // })}
-    // </>
 
     <div>
       <p className='foodCard'>

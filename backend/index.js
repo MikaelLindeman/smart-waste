@@ -1,9 +1,13 @@
 const express = require("express")
 const {MongoClient} = require("mongodb")
 const app = express()
-let db
 const cors = require("cors");
 const MatModel = require ("./models/mat")
+
+let db
+
+//Requiered to read server
+app.use(express.json())
 
 //Connect mongoose to our mongodb server
 const mongoose = require("mongoose")
@@ -51,6 +55,7 @@ app.get("/annonser", async (req, res) => {
     const allaAnnonser = await db.collection("ads").find().toArray()
     res.json(allaAnnonser)
 })
+
 
 //Get the mongodb client and use port 8080 for the server
 async function start() {

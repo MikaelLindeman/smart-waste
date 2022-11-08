@@ -19,7 +19,7 @@ function CreateNewForm(props) {
     setAllerg("")
     setFile("")
     CreatePhotoField.current.value = ""
-    const newPhoto = await Axios.post("/ads", data, { headers: { "Content-Type": "multipart/form-data" } })
+    const newPhoto = await Axios.post("/a", data, { headers: { "Content-Type": "multipart/form-data" } })
     props.setAnimals(prev => prev.concat([newPhoto.data]))
   }
 

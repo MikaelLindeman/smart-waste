@@ -2,9 +2,26 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Axios  from 'axios';
+import {useState} from 'react';
 
 
 function Nyannons() {
+
+    const [mat, setMat] = useState("")
+    const [allerg, setAllerg] = useState("")
+    const [info, setInfo] = useState("")
+
+  const createFood = () => {
+    Axios.post("http://localhost:8080/newFood", {
+      mat: mat, 
+      allerg: allerg, 
+      info: info
+    }).then((response) => {
+      alert("Food Added");
+    })
+  }
+
   return (
     <div className='nyAnnonsPage'>
       <h1 className='nyAnnons'>Ny annons!</h1>
@@ -17,10 +34,19 @@ function Nyannons() {
       noValidate
       autoComplete="off"
     >
-      <TextField required className='textField' id="outlined-basic" label="Maträtt" variant="outlined" />
-      <TextField required className='textField'id="outlined-basic" label="Allergener" variant="outlined" />
-      <TextField required className='textField'id="outlined-basic" label="Övrig info" variant="outlined" />
-      <Button variant="contained" color="success">New post</Button>
+      <TextField required className='textField' id="outlined-basic" label="Maträtt" variant="outlined" 
+      onChange={(event) => {
+        setMat(event.target.value);
+      }} />
+      <TextField required className='textField'id="outlined-basic" label="Allergener" variant="outlined"
+      onChange={(event) => {
+        setAllerg(event.target.value);
+      }}  />
+      <TextField required className='textField'id="outlined-basic" label="Övrig info" variant="outlined" 
+      onChange={(event) => {
+        setInfo(event.target.value);
+      }} />
+      <Button onClick={createFood} variant="contained" color="success">New post</Button>
 
 </Box>
     </div>
