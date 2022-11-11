@@ -24,6 +24,7 @@ function Nyannons() {
     })
   }
 
+
   return (
     <div className='nyAnnonsPage'>
       <h1 className='nyAnnons'>Ny annons!</h1>

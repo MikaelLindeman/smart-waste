@@ -1,8 +1,9 @@
 const express = require("express")
-const {MongoClient} = require("mongodb")
+const {MongoClient, ObjectId} = require("mongodb")
 const app = express()
 const cors = require("cors");
 const MatModel = require ("./models/mat")
+const sanitizeHTML = require('sanitize-html')
 
 let db
 
@@ -36,8 +37,26 @@ connection.once("open", function() {
         const mat = req.body;
         const newMat = new MatModel(mat);
         await newMat.save();
+        // const info = await db.collection("ads").insertOne(req.cleanupData)
+        // const newFood = await db.collection("ads").findOne({_id: new ObjectId(info.insertedId)})
         res.json(mat);
   });
+
+//     //Validation for creating food
+//   function cleanupData(req, res, next ) {
+//     if (typeof req.body.mat != "string") req.body.mat = ""
+//     if (typeof req.body.allerg != "string") req.body.allerg = ""
+//     if (typeof req.body.info != "string") req.body.info = ""
+    
+//     req.cleanupData = {
+//         name: sanitizeHTML(req.body.name.trim(), {allowedTags: [], allowedAttributes: {}}),
+//         allerg: sanitizeHTML(req.body.allerg.trim(), {allowedTags: [], allowedAttributes: {}}),
+//         info: sanitizeHTML(req.body.info.trim(), {allowedTags: [], allowedAttributes: {}})
+
+//     }
+
+//     next()
+//   }
 
 // Cors webpage
 var corsOptions = {
@@ -55,7 +74,6 @@ app.get("/annonser", async (req, res) => {
     const allaAnnonser = await db.collection("ads").find().toArray()
     res.json(allaAnnonser)
 })
-
 
 //Get the mongodb client and use port 8080 for the server
 async function start() {

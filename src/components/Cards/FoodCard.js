@@ -39,16 +39,16 @@ function Annonser() {
 function FoodCard(props) {
   return <>
       <div className='cardContainer'>
-        <Card sx={{ minWidth: 265, maxWidth: 265, minHeight: 250, maxHeight: 250, }} >
+        <Card sx={{ minWidth: 150, maxWidth: 150, minHeight: 250, maxHeight: 250, }} >
         <CardMedia
         component="img"
         height="100"
-        width="244"
+        width="150"
         image={pic}
         alt="pic info"
         />
         <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h6" component="div">
           {props.mat}
         </Typography>
         <Typography variant="body2" color="text.secondary">
@@ -57,7 +57,8 @@ function FoodCard(props) {
         
         </CardContent>
         <CardActions>
-        <Button  size="small" className="btn-se-mer">Se mer</Button>
+        <Button 
+        size="small" className="btn-se-mer">Delete</Button>
         </CardActions>
       </Card>
     </div>
