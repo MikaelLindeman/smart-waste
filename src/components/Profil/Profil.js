@@ -1,6 +1,9 @@
 import React from 'react'
 import bgpic from '../../assets/Images/ellipse.svg'
 import profilePic from '../../assets/Images/profile-pic.svg'
+import meny1 from '../../assets/Images/meny1.svg'
+import meny2 from '../../assets/Images/meny2.svg'
+import meny3 from '../../assets/Images/meny3.svg'
 
 function Profil() {
   return (
@@ -12,6 +15,11 @@ function Profil() {
           <div className='profil-pic'>
             <img src={profilePic} />
           </div>
+        </div>
+        <div className='profil-middle'>
+          <img src={meny1} className='meny-pic' />
+          <img src={meny2} className='meny-pic' />
+          <img src={meny3} className='meny-pic' />
         </div>
     </div>
   )
