@@ -75,6 +75,13 @@ app.get("/annonser", async (req, res) => {
     res.json(allaAnnonser)
 })
 
+//Delete 
+app.delete("/annonser/:id", async (req, res)=> {
+    if(typeof req.params.id != "string") req.params.id =""
+    db.collection("annonser").deleteOne(req.params.id)
+    res.send(console.log("gone!"))
+})
+
 //Get the mongodb client and use port 8080 for the server
 async function start() {
     const client = new MongoClient("mongodb://root:root@localhost:27017/SmartWaste?&authSource=admin")

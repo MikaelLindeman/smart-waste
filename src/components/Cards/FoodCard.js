@@ -21,6 +21,8 @@ function Annonser() {
     
   }, [])
 
+  
+  
   return (
 
     <div>
@@ -29,7 +31,8 @@ function Annonser() {
           return <div><FoodCard 
           mat={annons.mat} 
           allerg={annons.allerg}
-          info={annons.info} />
+          info={annons.info}
+          id={annons.id} />
           </div>
         })}
       </p>
@@ -37,6 +40,17 @@ function Annonser() {
   )
 }
 function FoodCard(props) {
+
+  const handleDelete = (id) => {
+    console.log(`http://localhost:8080/annonser/${id}`)
+  }
+
+  // const handleDelete = (id) => {
+  //   Axios.delete(`http://localhost:8080/annonser/${id}`)
+  //   .then(() => {
+  //       Annonser();
+  //   })
+  // }
   return <>
       <div className='cardContainer'>
         <Card sx={{ minWidth: 150, maxWidth: 150, minHeight: 250, maxHeight: 250, }} >
@@ -48,16 +62,19 @@ function FoodCard(props) {
         alt="pic info"
         />
         <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
+        <Typography gutterBottom variant="h6" component="div" class="mat-text">
           {props.mat}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <p>
+        <Typography variant="body2" color="text.secondary" class="info-text">
           {props.info}
         </Typography>
+        </p>
         
         </CardContent>
         <CardActions>
         <Button 
+        onClick={() => handleDelete(props.id)}
         size="small" className="btn-se-mer">Delete</Button>
         </CardActions>
       </Card>

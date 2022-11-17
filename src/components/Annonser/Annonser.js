@@ -6,7 +6,6 @@ import { IconButton } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 
 function Annonser() {
-
   return (
     <div className='annonserPage'>
       <div className='topper'>
@@ -18,9 +17,10 @@ function Annonser() {
             <SearchIcon/>
         </IconButton>
       </div>
-
-        <h1 className='annonser-text'>Vad är du sugen på?</h1>
-        <div className='foodCard'><FoodCard /></div>
+          <h1 className='annonser-text'>Vad är du sugen på?</h1>
+          <div className="annonser-cards">
+          <div className='foodCard'><FoodCard /></div>
+          </div>
     </div>
   )
 }
