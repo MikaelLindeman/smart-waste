@@ -20,8 +20,14 @@ function Nyannons() {
       allerg: allerg, 
       info: info
     }).then((response) => {
+      if (mat === "", allerg == "", info == "") {
+        alert("Vänligen fyll i alla textfält.")
+      } else {
       alert("Food Added");
+      }
     })
+
+    
   }
 
 

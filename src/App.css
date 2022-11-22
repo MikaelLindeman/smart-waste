@@ -86,9 +86,9 @@ html, body {
 .btn-se-mer {
     z-index: 0;
     padding: 2px;
-    position: fixed;
     bottom: 0px;
     left: 0px;
+
 }
 
 .nyAnnons {
@@ -122,4 +122,13 @@ html, body {
 }
 .meny-pic {
     max-width: 450px;
+    cursor: pointer;
+}
+
+.info-text {
+    --max-lines: 2;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);;
 }
