@@ -12,7 +12,7 @@ function Annonser() {
   const [annonser, setAnnonser] = useState([])
 
   useEffect(() => {
-    Axios.get("http://localhost:8080/annonser").then((response) => {
+    Axios.get("http://localhost:8080/ads").then((response) => {
       setAnnonser(response.data)
     })
       // Might need to download
@@ -43,16 +43,14 @@ function Annonser() {
 
 function FoodCard(props) {
 
-  // const handleDelete = (id) => {
-  //   console.log(`http://localhost:8080/annonser/:id`)
+  // const handleDelete = (_id) => {
+  //   console.log(`http://localhost:8080/ads/${_id}`)
   // }
   
 
   const handleDelete = (_id) => {
-    Axios.delete(`http://localhost:8080/annonser/${_id}`)
-    .then(() => {
-        Annonser();
-    })
+    Axios.delete(`http://localhost:8080/ads/${_id}`)
+    console.log(`http://localhost:8080/ads/${_id}`)
   }
   return <>
       <div className='cardContainer'>

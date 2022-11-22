@@ -76,7 +76,7 @@ app.get("/annonser", async (req, res) => {
 })
 
 //Delete 
-app.delete("/annonser/_id", async (req, res)=> {
+app.delete("/ads/_id", async (req, res)=> {
     if(typeof req.params.id != "string") req.params.id =""
     db.collection("annonser").deleteOne(req.params.id)
     res.send(console.log("Gone!"))
