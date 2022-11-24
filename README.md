@@ -1,3 +1,16 @@
+Hello!
+
+This website was created to upload food ads and display them. Uploading pictures will come with a later update. 
+It is meant to be viewed on phone or tablet-sized products for best experience. 
+
+The backend is made with MongoDB/MongoDB Compass and Docker.
+
+
+#
+Due to a CORS error you might need to download 
+https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc/related?hl=en-US
+To view the pictures.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
