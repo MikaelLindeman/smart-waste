@@ -13,6 +13,7 @@ import Paper from '@mui/material/Paper';
 
 export default function SimpleBottomNavigation() {
 
+    //Changes value when pressing new pages
     const pathname = window.location.pathname;
     const [value, setValue] = useState(pathname)
     const handleChange = (event, newValue) => {
@@ -21,6 +22,8 @@ export default function SimpleBottomNavigation() {
 
 
   return (
+
+    //Bottom navigation with 3 pages
   <Box>
     <Paper>
       <BottomNavigation sx= {{ position: 'fixed', bottom: 0, left: 0, right: 0, }}elevation={3}

@@ -1,9 +1,8 @@
 const express = require("express")
-const {MongoClient, ObjectId} = require("mongodb")
+const {MongoClient} = require("mongodb")
 const app = express()
 const cors = require("cors");
 const MatModel = require ("./models/mat")
-const sanitizeHTML = require('sanitize-html')
 
 let db
 
@@ -37,26 +36,9 @@ connection.once("open", function() {
         const mat = req.body;
         const newMat = new MatModel(mat);
         await newMat.save();
-        // const info = await db.collection("ads").insertOne(req.cleanupData)
-        // const newFood = await db.collection("ads").findOne({_id: new ObjectId(info.insertedId)})
         res.json(mat);
   });
 
-//     //Validation for creating food
-//   function cleanupData(req, res, next ) {
-//     if (typeof req.body.mat != "string") req.body.mat = ""
-//     if (typeof req.body.allerg != "string") req.body.allerg = ""
-//     if (typeof req.body.info != "string") req.body.info = ""
-    
-//     req.cleanupData = {
-//         name: sanitizeHTML(req.body.name.trim(), {allowedTags: [], allowedAttributes: {}}),
-//         allerg: sanitizeHTML(req.body.allerg.trim(), {allowedTags: [], allowedAttributes: {}}),
-//         info: sanitizeHTML(req.body.info.trim(), {allowedTags: [], allowedAttributes: {}})
-
-//     }
-
-//     next()
-//   }
 
 // Cors webpage
 var corsOptions = {
@@ -75,10 +57,10 @@ app.get("/annonser", async (req, res) => {
     res.json(allaAnnonser)
 })
 
-//Delete 
+//Delete request
 app.delete("/ads/_id", async (req, res)=> {
     if(typeof req.params.id != "string") req.params.id =""
-    db.collection("annonser").deleteOne(req.params.id)
+    db.collection("ads").deleteOne(req.params.id)
     res.send(console.log("Gone!"))
 })
 

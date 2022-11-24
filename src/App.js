@@ -7,7 +7,6 @@ import Profil from './components/Profil/Profil';
 
 function App() {
 
-    console.log(window.location.href);
     return (
     <>
     <Navbar />

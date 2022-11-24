@@ -22,7 +22,7 @@ function Annonser() {
   }, [])
 
   
-  
+  //Display the information inside the Food Card
   return (
 
     <div>
@@ -43,14 +43,9 @@ function Annonser() {
 
 function FoodCard(props) {
 
-  // const handleDelete = (_id) => {
-  //   console.log(`http://localhost:8080/ads/${_id}`)
-  // }
-  
-
+  //Handle the delete with when you press DELETE
   const handleDelete = (_id) => {
     Axios.delete(`http://localhost:8080/ads/${_id}`)
-    console.log(`http://localhost:8080/ads/${_id}`)
   }
   return <>
       <div className='cardContainer'>
@@ -80,7 +75,6 @@ function FoodCard(props) {
         </CardActions>
       </Card>
     </div>
-    {/* {props.mat} + {props.allerg} + {props.info}.  */}
     </>
 }
 export default Annonser

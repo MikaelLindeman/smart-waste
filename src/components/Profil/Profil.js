@@ -6,6 +6,8 @@ import meny2 from '../../assets/Images/meny2.svg'
 import meny3 from '../../assets/Images/meny3.svg'
 
 function Profil() {
+
+  //Profile page
   return (
     <div>
         <div className='profil-top'>
@@ -13,7 +15,7 @@ function Profil() {
             <img src={bgpic} alt='green background'/>
           </div>
           <div className='profil-pic'>
-            <img src={profilePic} />
+            <img src={profilePic} alt='picture of a guy' />
           </div>
         </div>
         <div className='profil-middle'>

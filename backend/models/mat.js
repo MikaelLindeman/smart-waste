@@ -1,6 +1,10 @@
 const mongoose = require("mongoose")
 
 const MatSchema = new mongoose.Schema({
+    _id: {
+        type: Number,
+        required: true,
+    },
     mat: {
         type: String,
         required: true,
