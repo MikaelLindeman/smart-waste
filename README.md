@@ -7,9 +7,7 @@ The backend is made with MongoDB/MongoDB Compass and Docker.
 
 
 #
-Due to a CORS error you might need to download 
-https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc/related?hl=en-US
-To view the pictures.
+
 
 # Getting Started with Create React App
 
